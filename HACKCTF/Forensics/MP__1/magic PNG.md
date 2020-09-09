@@ -12,4 +12,4 @@
 89 50 4E 47 2E 0A 2E 0A ....
 ```    
 푸터 시그니처값이 이상하다! 이 푸터 시그니처를 고치고 다시 저장해보자.
-![MP_2](/path/to/MP__2.png)
+![MP_2](/HACKCTF/Forensics/MP__1/MP__2.PNG)
