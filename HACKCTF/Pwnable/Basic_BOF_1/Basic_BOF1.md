@@ -3,7 +3,7 @@
 아마 IDA라는 프로그램으로 뜯어 풀었을 텐데   
 거기에 나오는 ESP라든가, ECX, EBP...   
 모르는 용어들이 많이 나와서 한 번 짚어주는게 좋을 것 같아 짚어 주도록 하겠다.   
-![프로그래밍메모리구조](/HACKCTF/Pwnable/Basic_BOF%_1/프로그래밍메모리구조.PNG)    
+![프로그래밍메모리구조](/HACKCTF/Pwnable/Basic_BOF_1/프로그래밍메모리구조.PNG)    
 일단 위 사진을 보면서 설명일 이어가자면   
 우리가 프로그램을 실행할 때 운영체제에서 필요한 메모리 공간을 제공하는데,   
 1. 코드영역    
@@ -49,14 +49,14 @@ ESP의 값이 줄어들면 메모리공간이 늘어가는 거다.
 
 ## 풀이    
 자 일단 IDA로 까보면   
-![IDAVIEW](/HACKCTF/Pwnable/Basic_BOF%_1/IDAview.PNG)   
+![IDAVIEW](/HACKCTF/Pwnable/Basic_BOF_1/IDAview.PNG)   
 >  물론 코드에 주석으로 ebp esp값이 적혀있긴 하나 아무래도 실제 코드값으로 보는게 더 정확하지 않을 까 싶다.   
 일단 s는 -34에 위치해 있다고 하니 ebp-34이고, v5는 이제 코드를 보면 이해가 갈 텐데    
-![pseudocode](/HACKCTF/Pwnable/Basic_BOF%_1/pseudocode.PNG)   
+![pseudocode](/HACKCTF/Pwnable/Basic_BOF_1/pseudocode.PNG)   
 main에서 나오는 v5는 IDAview로 봤을 때 계속해서 var_C가 나오는 거보면 var_C = v5라는 걸 유츄할 수 있다.   
 v5는 -0C에 위치해 있다고 하니 ebp-C이네.   
 그럼 이해가 되게 그림으로 그려 보겠다.    
-![스택메모리구조](/HACKCTF/Pwnable/Basic_BOF%_1/stack.PNG)  
+![스택메모리구조](/HACKCTF/Pwnable/Basic_BOF_1/stack.PNG)  
 차근차근 설명 해주자면 일단 ret와 sfp라는 처음보는 단어들이 나와 당황스러울 텐데,   
 ret는 말그래도 return, 함수의 끝이고, sfp는 이전 함수의 ebp를 저장하는 공간이다.   
 함수의 경우 함수의 주소로 이동했다가 다시 돌아와야 하기 때문에 이전 함수의 ebp를 저장해놓는 것.   
