@@ -51,6 +51,7 @@ ESP의 값이 줄어들면 메모리공간이 늘어가는 거다.
 자 일단 IDA로 까보면   
 ![IDAVIEW](/HACKCTF/Pwnable/Basic_BOF_1/IDAview.PNG)   
 >  물론 코드에 주석으로 ebp esp값이 적혀있긴 하나 아무래도 실제 코드값으로 보는게 더 정확하지 않을 까 싶다.   
+
 일단 s는 -34에 위치해 있다고 하니 ebp-34이고, v5는 이제 코드를 보면 이해가 갈 텐데    
 ![pseudocode](/HACKCTF/Pwnable/Basic_BOF_1/pseudocode.PNG)   
 main에서 나오는 v5는 IDAview로 봤을 때 계속해서 var_C가 나오는 거보면 var_C = v5라는 걸 유츄할 수 있다.   
