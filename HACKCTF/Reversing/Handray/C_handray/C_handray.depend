@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1600250902 source:d:\ctf-write-up\hackctf\reversing\handray\c_handray\main.c
+	<stdio.h>
+	<stdlib.h>
+
