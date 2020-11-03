@@ -81,3 +81,7 @@ p.recvuntil("[Attack] > ")
 p.sendline(payload)
 p.interactive()
 ```    
+ -----------------------------------------  
+ 
+![run](run.PNG)    
+손쉽게 flag를 얻었다!   
